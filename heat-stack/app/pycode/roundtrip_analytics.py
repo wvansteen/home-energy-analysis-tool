@@ -1,7 +1,12 @@
-from rules_engine import engine, helpers, parser
-from rules_engine.pydantic_models import (FuelType, HeatLoadInput,
-                                          ProcessedEnergyBillInput,
-                                          TemperatureInput)
+from rules_engine import (
+    FuelType,
+    HeatLoadInput,
+    ProcessedEnergyBillInput,
+    TemperatureInput,
+    engine,
+    helpers,
+    parser,
+)
 
 
 def executeRoundtripAnalyticsFromForm(
