@@ -217,13 +217,13 @@ test('pyodide solves climate change', async () => {
 	}
 
 	const executePy = await pyodide.runPythonAsync(`
-    from rules_engine import parser
-    from rules_engine.pydantic_models import (
+    from rules_engine import (
         FuelType,
         HeatLoadInput,
-        TemperatureInput
+        TemperatureInput,
+        engine,
+        parser,
     )
-    from rules_engine import engine
 
     def execute(summary_input_js, temperature_input_js, csv_data_js):
         summary_input_from_js = summary_input_js.as_object_map().values()._mapping
